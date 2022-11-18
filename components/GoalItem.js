@@ -6,7 +6,7 @@ export function GoalItem(props) {
       <Pressable
         android_ripple={{ color: "#555555" }}
         onPress={props.onDeleteItem.bind(this, props.id)}
-        style={({ pressData }) => pressed && styles.pressedItem} // ripple on iOS
+        style={({ pressed }) => pressed && styles.pressedItem} // ripple on iOS
       >
         <Text style={styles.goalText}>{props.text}</Text>
       </Pressable>
